@@ -1,0 +1,50 @@
+[
+    {
+        "timestamp": "2025-04-18T01:36:29.470616",
+        "value": "LoRa Receiver"
+    },
+    {
+        "timestamp": "2025-04-18T01:36:42.539160",
+        "value": "Received packet"
+    },
+    {
+        "timestamp": "2025-04-18T01:36:44.540933",
+        "value": "! SOS !"
+    },
+    {
+        "timestamp": "2025-04-18T01:36:45.542399",
+        "value": "Latitude: 28.750, Longitude: 77.114"
+    },
+    {
+        "timestamp": "2025-04-18T01:36:46.545315",
+        "value": "Name: Builders, Age: 19, Team: A, Medical Cgfl1\u001dd"
+    },
+    {
+        "timestamp": "2025-04-18T01:36:47.548087",
+        "value": ")c)\u06b0 with RSSI"
+    },
+    {
+        "timestamp": "2025-04-18T01:36:49.559389",
+        "value": "-77"
+    },
+    {
+        "timestamp": "2025-04-18T01:37:00.705116",
+        "value": "Message recieved"
+    },
+    {
+        "timestamp": "2025-04-18T01:38:51.032560",
+        "value": "Received packet"
+    },
+    {
+        "timestamp": "2025-04-18T01:38:53.039882",
+        "value": "g\u0010c\\L\u001bB[\\\u0013\r'#Rr$GQ\u0003\u0004T^DM\u0017:\u019f-\u0017?9<\u001aC\u0532G'Ka\u001cN|g%@fsf\u0006y\u0013\u0012,y\u001c\u0003L$r-\u0005I\u000eM[\u0006w2\u001brMw\u0007\u0015\r|lt_jS?.\u001et;`\tm f\u0665_UfQS1\u001d with RSSI"
+    },
+    {
+        "timestamp": "2025-04-18T01:38:55.054742",
+        "value": "-119"
+    },
+    {
+        "timestamp": "2025-04-18T01:39:10.110449",
+        "value": "Message recieved"
+    }
+]
