@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { AlertCircle, Battery, Signal } from 'lucide-react';
+import { AlertCircle, Battery, Signal, User } from 'lucide-react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -62,45 +62,46 @@ const Dashboard = () => {
   const [longitude, setLongitude] = useState<number>(0);
   const [rssi, setRssi] = useState<number>(0);
   const [userDetails, setUserDetails] = useState<string>('');
+  const [showAlert, setShowAlert] = useState<boolean>(false);
 
   useEffect(() => {
     fixLeafletIcon();
 
+    // Parse the data and update state
     const { latitude, longitude, rssi, userDetails } = parseData(locationData);
+
+    // Check if data has changed
+    if (latitude !== 0 || longitude !== 0) {
+      setShowAlert(true);
+      setTimeout(() => setShowAlert(false), 5000); // Hide alert after 5 seconds
+    }
+
     setLatitude(latitude);
     setLongitude(longitude);
     setRssi(rssi);
     setUserDetails(userDetails);
-  }, []);
+  }, [locationData]);
 
   return (
     <div className="space-y-6 p-6 text-white">
       {/* Alert Header */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <AlertCircle className="h-6 w-6 text-red-500 animate-pulse" />
-          <h2 className="text-xl font-semibold text-red-500">Emergency Alert</h2>
-        </div>
-        <div className="flex items-center space-x-4">
+      {showAlert && (
+        <div className="flex items-center justify-between bg-red-500 text-white p-4 rounded-lg shadow-lg animate-bounce">
           <div className="flex items-center space-x-2">
-            <Battery className="h-5 w-5 text-green-400" />
-            <span>Battery: 85%</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Signal className="h-5 w-5 text-blue-400" />
-            <span>RSSI: {rssi}</span>
+            <AlertCircle className="h-6 w-6" />
+            <h2 className="text-lg font-semibold">Emergency Alert: New Data Received!</h2>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Main Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Map Section */}
-        <div className="h-96">
-          <MapContainer center={[latitude, longitude]} zoom={15} className="h-full w-full">
+        <div className="lg:col-span-2 h-96">
+          <MapContainer center={[latitude, longitude]} zoom={15} className="h-full w-full rounded-lg shadow-lg">
             <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+              attribution='&copy; <a href="https://www.esri.com/">Esri</a>, USGS, NOAA'
             />
             <Marker position={[latitude, longitude]}>
               <Popup>
@@ -116,13 +117,33 @@ const Dashboard = () => {
         </div>
 
         {/* User Details Section */}
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">User Details</h3>
-          <div className="p-4 bg-gray-800 rounded-lg shadow space-y-2">
-            <p>{userDetails}</p>
+        <div className="space-y-4 bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 className="text-lg font-semibold flex items-center space-x-2">
+            <User className="h-6 w-6 text-blue-400" />
+            <span>User Details</span>
+          </h3>
+          <div className="space-y-2">
+            <p><strong>Name:</strong> {userDetails.split(',')[0]}</p>
             <p><strong>Latitude:</strong> {latitude}</p>
             <p><strong>Longitude:</strong> {longitude}</p>
+            <p><strong>RSSI:</strong> {rssi}</p>
           </div>
+        </div>
+      </div>
+
+      {/* Additional Information Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 className="text-lg font-semibold">Battery Status</h3>
+          <p className="text-green-400">Battery is healthy and operational.</p>
+        </div>
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 className="text-lg font-semibold">Signal Strength</h3>
+          <p className="text-blue-400">RSSI: {rssi}</p>
+        </div>
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 className="text-lg font-semibold">Last Update</h3>
+          <p>{new Date().toLocaleString()}</p>
         </div>
       </div>
     </div>
