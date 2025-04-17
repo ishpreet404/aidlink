@@ -4,16 +4,6 @@
 
 ---
 
-## 🌐 Website Overview
-
-The AidLink web interface displays **live GPS data** transmitted from the Arduino-based beacon device. Data is updated every 2 seconds and presented both as raw JSON and on a **real-time map** (e.g., using Leaflet or Google Maps).
-
-### Features:
-- Real-time updates from `arduino_data.json`
-- Complete log of all received data
-- Integration-ready for map visualization of location data
-
----
 
 ## 📡 Device Overview
 
@@ -25,6 +15,16 @@ The AidLink web interface displays **live GPS data** transmitted from the Arduin
 - **SOS Button** – Activates continuous emergency transmission
 - **Rechargeable Battery** – Ensures long-lasting power supply
 - **Durable Enclosure** – Weather-resistant casing for field use
+
+---
+## 🌐 Website Overview
+
+The AidLink web interface displays **live GPS data** transmitted from the Arduino-based beacon device. Data is updated every 2 seconds and presented both as raw JSON and on a **real-time map** (e.g., using Leaflet or Google Maps).
+
+### Features:
+- Real-time updates from `arduino_data.json`
+- Complete log of all received data
+- Integration-ready for map visualization of location data
 
 ---
 
