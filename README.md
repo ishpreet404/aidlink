@@ -65,8 +65,9 @@ The AidLink web interface displays **live GPS data** transmitted from the Arduin
 2. Start a simple web server (e.g. using Python):
    ```bash
    python -m http.server
+   ```
 
-##Screenshots
+## Screenshots (Dashboard)
 <img width="1420" alt="Screenshot 2025-04-17 at 3 05 40 PM" src="https://github.com/user-attachments/assets/7b66cd8a-3c7c-41ca-960f-5a9b47e59558" />
 <img width="1430" alt="Screenshot 2025-04-17 at 3 05 08 PM" src="https://github.com/user-attachments/assets/32bef4ac-3a09-4b45-b5b5-2afe057ae2ac" />
 
