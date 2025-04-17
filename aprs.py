@@ -8,13 +8,8 @@ ais = aprslib.IS(callsign, passwd=password, host="rotate.aprs2.net", port=14580)
 ais.connect()
 
 # Convert decimal coordinates to APRS format
-lat_deg = int(28.749335)
-lat_min = (28.749335 - lat_deg) * 60
-lat_str = f"{lat_deg:02d}{lat_min:05.2f}N"
-
-lon_deg = int(77.117010)
-lon_min = (77.117010 - lon_deg) * 60
-lon_str = f"{lon_deg:03d}{lon_min:05.2f}E"
+lat_str = f"{int(28.749335):02d}{(28.749335 % 1) * 60:05.2f}N"
+lon_str = f"{int(77.117010):03d}{(77.117010 % 1) * 60:05.2f}E"
 
 # Position with symbol (- is for house)
 position = f"{lat_str}/{lon_str}-"
