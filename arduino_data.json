@@ -1,0 +1,34 @@
+[
+    {
+        "timestamp": "2025-04-17T12:37:34.286104",
+        "value": "LoRa Receiver"
+    },
+    {
+        "timestamp": "2025-04-17T12:38:05.431864",
+        "value": "Received packet"
+    },
+    {
+        "timestamp": "2025-04-17T12:38:07.433938",
+        "value": "! SOS !"
+    },
+    {
+        "timestamp": "2025-04-17T12:38:08.436601",
+        "value": "Latitude: 26.841, Longitude: 75.561"
+    },
+    {
+        "timestamp": "2025-04-17T12:38:09.438109",
+        "value": "Name: Glitched Out, Age: 19, Team: A, Medical Condition: Insanely Smart"
+    },
+    {
+        "timestamp": "2025-04-17T12:38:10.439789",
+        "value": "with RSSI"
+    },
+    {
+        "timestamp": "2025-04-17T12:38:12.455425",
+        "value": "-118"
+    },
+    {
+        "timestamp": "2025-04-17T12:38:21.891480",
+        "value": "Message recieved"
+    }
+]
