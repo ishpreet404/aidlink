@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Arduino Data</title>
-</head>
-<body>
-  <h1>Live Arduino Data</h1>
-  <pre id="output">Loading...</pre>
-
-  <script>
-    async function fetchData() {
-      const response = await fetch("arduino_data.json");
-      const data = await response.json();
-
-      // Display the entire dataset
-      document.getElementById("output").innerText = JSON.stringify(data, null, 2);
-    }
-
-    // Fetch every 2 seconds
-    setInterval(fetchData, 2000);
-
-    // Optional: Fetch once immediately
-    fetchData();
-  </script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AidLink Dashboard Implementation</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
