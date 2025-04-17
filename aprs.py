@@ -1,7 +1,11 @@
 import aprslib
+import os
+from dotenv import load_dotenv
 
-callsign = "VU2MZS" 
-password = "19881"
+load_dotenv(".env")
+
+callsign = os.getenv("CALLSIGN") 
+password = os.getenv("PASSWORD")
 
 # Use a reliable public APRS-IS server
 ais = aprslib.IS(callsign, passwd=password, host="rotate.aprs2.net", port=14580)
