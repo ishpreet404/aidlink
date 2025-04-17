@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arduino Data</title>
+</head>
+<body>
+  <h1>Live Arduino Data</h1>
+  <pre id="output">Loading...</pre>
+
+  <script>
+    async function fetchData() {
+      const response = await fetch("arduino_data.json");
+      const data = await response.json();
+
+      // Display the entire dataset
+      document.getElementById("output").innerText = JSON.stringify(data, null, 2);
+    }
+
+    // Fetch every 2 seconds
+    setInterval(fetchData, 2000);
+
+    // Optional: Fetch once immediately
+    fetchData();
+  </script>
+</body>
+</html>
