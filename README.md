@@ -115,4 +115,8 @@ The AidLink web interface displays **live GPS data** transmitted from the Arduin
   <img src="https://github.com/user-attachments/assets/02bc2833-00b3-4607-8668-0d147cb7affa" width="250" />
   <img src="https://github.com/user-attachments/assets/5e85fa98-e548-487b-92ca-d1c66abf16a3" width="250" />
 </p>
+## Gui Video 
+   https://github.com/user-attachments/assets/3d97a178-e2e5-4021-bf41-3c875cb021a0
+
+
 
