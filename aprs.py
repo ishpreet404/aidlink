@@ -19,7 +19,7 @@ lon_str = f"{lon_deg:03d}{lon_min:05.2f}E"
 # Position with symbol (- is for house)
 position = f"{lat_str}/{lon_str}-"
 
-# Send packet
+# Send packet to aprs
 packet = f"{callsign}>APRS,TCPIP*:={position}Test from Python script"
 ais.sendall(packet)
 
