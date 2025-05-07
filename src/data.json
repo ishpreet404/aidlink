@@ -1,34 +1,110 @@
 [
     {
-        "timestamp": "2025-04-18T01:49:20.802982",
+        "timestamp": "2025-05-07T17:20:55.727305",
         "value": "LoRa Receiver"
     },
     {
-        "timestamp": "2025-04-18T01:50:38.166115",
+        "timestamp": "2025-05-07T17:21:09.379584",
         "value": "Received packet"
     },
     {
-        "timestamp": "2025-04-18T01:50:40.168441",
+        "timestamp": "2025-05-07T17:21:11.382673",
         "value": "! SOS !"
     },
     {
-        "timestamp": "2025-04-18T01:50:41.170726",
-        "value": "Latitude: 28.750, Longitude: 77.114"
+        "timestamp": "2025-05-07T17:21:12.385623",
+        "value": "Latitude: 28.631557, Longitude: 77.116353"
     },
     {
-        "timestamp": "2025-04-18T01:50:42.173801",
-        "value": "Name: Builders, Age: 19, Team: A, Medical Condition: Insanely Smart"
+        "timestamp": "2025-05-07T17:21:13.389181",
+        "value": "Name: Order of Phoenix, Age: 19, Team: A"
     },
     {
-        "timestamp": "2025-04-18T01:50:43.175241",
+        "timestamp": "2025-05-07T17:21:14.391478",
         "value": "with RSSI"
     },
     {
-        "timestamp": "2025-04-18T01:50:45.192185",
-        "value": "-99"
+        "timestamp": "2025-05-07T17:21:16.406448",
+        "value": "-78"
     },
     {
-        "timestamp": "2025-04-18T01:50:56.216088",
+        "timestamp": "2025-05-07T17:21:27.587344",
+        "value": "Message recieved"
+    },
+    {
+        "timestamp": "2025-05-07T17:21:58.744922",
+        "value": "Received packet"
+    },
+    {
+        "timestamp": "2025-05-07T17:22:00.747456",
+        "value": "! SOS !"
+    },
+    {
+        "timestamp": "2025-05-07T17:22:01.752692",
+        "value": "Latitude: 28.631557, Longip}4l7M\u001dlkS\u001cy>\u0013f\u001fm\u007fG\r@W:\u0002\u0007b^V\u0005l with RSSI"
+    },
+    {
+        "timestamp": "2025-05-07T17:22:03.766677",
+        "value": "-117"
+    },
+    {
+        "timestamp": "2025-05-07T17:22:16.821673",
+        "value": "Message recieved"
+    },
+    {
+        "timestamp": "2025-05-07T17:26:37.657559",
+        "value": "Received packet"
+    },
+    {
+        "timestamp": "2025-05-07T17:26:39.661801",
+        "value": "! SOS !"
+    },
+    {
+        "timestamp": "2025-05-07T17:26:40.665397",
+        "value": "Latitude: 28.631557, Longitude: 77.116353"
+    },
+    {
+        "timestamp": "2025-05-07T17:26:41.668687",
+        "value": "Name: Order of Phoenix, Age: 19, Team: A"
+    },
+    {
+        "timestamp": "2025-05-07T17:26:42.672279",
+        "value": "with RSSI"
+    },
+    {
+        "timestamp": "2025-05-07T17:26:44.682823",
+        "value": "-75"
+    },
+    {
+        "timestamp": "2025-05-07T17:26:55.864854",
+        "value": "Message recieved"
+    },
+    {
+        "timestamp": "2025-05-07T17:27:35.044997",
+        "value": "Received packet"
+    },
+    {
+        "timestamp": "2025-05-07T17:27:37.048904",
+        "value": "! SOS !"
+    },
+    {
+        "timestamp": "2025-05-07T17:27:38.055943",
+        "value": "Latitude: 28.631557, Longitude: 77.116353"
+    },
+    {
+        "timestamp": "2025-05-07T17:27:39.060554",
+        "value": "Name: Order of Phoenix, Age: 19, Team: A"
+    },
+    {
+        "timestamp": "2025-05-07T17:27:40.063463",
+        "value": "with RSSI"
+    },
+    {
+        "timestamp": "2025-05-07T17:27:42.076202",
+        "value": "-76"
+    },
+    {
+        "timestamp": "2025-05-07T17:27:53.134758",
         "value": "Message recieved"
     }
 ]

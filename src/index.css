@@ -2,37 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --- LEAFLET CONTAINER ENHANCEMENTS --- */
 .leaflet-container {
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.20), 0 1.5px 6px rgba(51, 132, 255, 0.04);
+  outline: none;
+  transition: box-shadow 0.3s, border-radius 0.2s;
+}
+.leaflet-container:focus {
+  outline: 2px solid #3b82f6; /* Tailwind blue-500 */
 }
 
+/* --- LEAFLET POPUP ENHANCEMENTS --- */
 .leaflet-popup-content-wrapper {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f3f4f6 70%, #e0e7ff 100%);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 24px 0 rgba(0,0,0,0.13);
+  font-family: 'Inter', ui-sans-serif;
+  padding: 1rem 0.85rem;
+  color: #1f2937;
+  font-size: 1rem;
+  border: 1px solid #dbeafe;
+  transition: box-shadow 0.2s, border-radius 0.2s;
 }
-
 .leaflet-popup-tip {
-  background: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(135deg, #f3f4f6 70%, #e0e7ff 100%);
 }
 
-/* Custom scrollbar for logs */
+/* --- CUSTOM SCROLLBAR --- */
+
+/* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
+  height: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(31, 41, 55, 0.5);
-  border-radius: 4px;
+  background: rgba(31, 41, 55, 0.22); /* More subtle */
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(59, 130, 246, 0.5);
-  border-radius: 4px;
+  background: linear-gradient(135deg, #3b82f6 60%, #2563eb 100%);
+  border-radius: 6px;
+  border: 2px solid rgba(59,130,246,0.08);
+  transition: background .25s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(59, 130, 246, 0.7);
+  background: linear-gradient(135deg, #2563eb 70%, #60a5fa 100%);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 rgba(31, 41, 55, 0.2);
+}
+
+/* Optional - make scrollbars "invisible" on mobile to save space */
+@media (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  * {
+    scrollbar-width: none;
+  }
+}
+
+/* --- Smooth transitions for clickable cards --- */
+.card, .rounded-2xl, .rounded-3xl {
+  transition: box-shadow 0.2s, transform 0.18s;
+}
+.card:hover, .rounded-2xl:hover, .rounded-3xl:hover {
+  box-shadow: 0 8px 36px 0 rgba(59,130,246,0.22), 0 1.5px 6px rgba(49, 130, 246, 0.08);
+  transform: translateY(-2px) scale(1.012);
+}
+
+/* --- Better focus ring for accessibility --- */
+:focus-visible {
+  outline: 2.5px solid #60a5fa;
+  outline-offset: 2px;
 }
