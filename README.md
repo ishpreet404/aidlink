@@ -70,7 +70,7 @@ The AidLink web interface displays **live GPS data** transmitted from the Arduin
      ```
      AID123>APRS,TCPIP*:!4859.30N/12345.00W>Emergency SOS from AidLink
      ```
-3. The beacon will appear on the APRS map globally.
+3. The beacon will appear on the APRS map globally with callsign.
 
 ---
 
